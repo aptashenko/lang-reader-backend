@@ -1,6 +1,7 @@
 // @ts-ignore
 import {IsString, IsNotEmpty} from 'class-validator';
 import {LanguagesTypes} from "../../texts/types/languages.types";
+import {LevelsTypes} from "../../texts/types/levels.types";
 
 export class TranslateWordDto {
     @IsNotEmpty()
@@ -9,12 +10,12 @@ export class TranslateWordDto {
 
     @IsNotEmpty()
     @IsString()
-    language_learning: LanguagesTypes;
+    difficulty: LevelsTypes;
 
     @IsNotEmpty()
     @IsString()
-    language_native: LanguagesTypes;
+    language: LanguagesTypes;
 
     @IsString()
-    context: string
+    translation: string
 }

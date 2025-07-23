@@ -1,30 +1,18 @@
 // @ts-ignore
-import { IsOptional, IsString, IsInt, Min } from 'class-validator';
-import { Type } from 'class-transformer';
-import {CreateBookDto} from "./create-book.dto";
-import {DefaultValuePipe} from "@nestjs/common"; // ✅ правильно
+import {IsString, Min, IsNotEmpty, Max, IsIn} from 'class-validator';
+import {LanguagesTypes} from "../types/languages.types";
+import {LevelsTypes} from "../types/levels.types";
+import {Levels} from "../constants/levels.enum";
 
-export class BookQueryDto {
-    @IsOptional()
+export class TextsQueryDto {
+    @IsNotEmpty()
     @IsString()
-    search?: string;
+    language_learning: LanguagesTypes;
 
-    @IsOptional()
-    @Type(() => Number)
-    @IsInt()
-    @Min(1)
-    page?: number;
+    @IsNotEmpty()
+    @IsString()
+    language_native: LanguagesTypes;
 
-    @IsOptional()
-    @Type(() => Number)
-    @IsInt()
-    @Min(1)
-    limit?: number;
-
-    @IsOptional()
-    sort: keyof CreateBookDto;
-
-    @IsOptional()
-    order: 'asc' | 'desc';
-
+    @IsIn(Object.keys(Levels), { message: 'Level must be one of a1, a2, b1, b2' })
+    level: LevelsTypes;
 }
