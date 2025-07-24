@@ -26,7 +26,7 @@ async function bootstrap() {
       })
   );
     app.enableCors({
-        origin: ['http://localhost:5173'], // разреши свой фронт
+        origin: ['http://localhost:5173', 'https://language-reader.com'], // разреши свой фронт
         credentials: true,
     });
     app.setGlobalPrefix('api');
