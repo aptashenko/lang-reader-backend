@@ -1,6 +1,7 @@
 # 🌍 Lang Reader Backend
 
 > Backend service for learning foreign languages through reading and vocabulary tracking.
+> 🚧 This project is currently under active development. Features and APIs may change frequently.
 
 Lang Reader is a platform that helps users learn languages by reading adapted texts. Users can save new words, track progress, practice with flashcards, and get feedback from AI.
 
