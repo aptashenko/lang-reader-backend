@@ -38,16 +38,18 @@ cd lang-reader-backend``
 
 ### 3. Create a .env file
 
-``SUPABASE_URL=your_supabase_project_url
+```
+SUPABASE_URL=your_supabase_project_url
 SUPABASE_KEY=your_supabase_service_role_key
 OPENAI_API_KEY=your_openai_api_key
-PORT=3000``
+PORT=3000
+```
 
 ### 4. Run the server
 ``npm run start:dev``
 
 ### 📁 Project Structure
-``
+```
 src/
 ├── auth/              # Supabase token validation, route guards
 ├── texts/             # Endpoints for managing reading texts
@@ -56,4 +58,4 @@ src/
 ├── ai/                # AI integration and validation
 ├── common/            # Shared helpers and decorators
 └── main.ts            # Application entry point
-``
+```
