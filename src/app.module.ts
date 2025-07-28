@@ -11,6 +11,8 @@ import {WordsController} from "./controllers/words/words.controller";
 import {WordsService} from "./controllers/words/words.service";
 import {ProfileController} from "./controllers/profile/profile.controller";
 import {ProfileService} from "./controllers/profile/profile.service";
+import {TranslateController} from "./controllers/translate/translate.controller";
+import {TranslateService} from "./controllers/translate/translate.service";
 
 @Module({
   imports: [
@@ -18,7 +20,7 @@ import {ProfileService} from "./controllers/profile/profile.service";
     SupabaseModule,
     OpenaiModule,
   ],
-  controllers: [TextsController, AuthController, WordsController, ProfileController],
-  providers: [TextsService, SupabaseService, AuthService, WordsService, ProfileService],
+  controllers: [TextsController, AuthController, WordsController, ProfileController, TranslateController],
+  providers: [TextsService, SupabaseService, AuthService, WordsService, ProfileService, TranslateService],
 })
 export class AppModule {}
